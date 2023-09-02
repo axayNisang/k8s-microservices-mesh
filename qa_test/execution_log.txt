@@ -1,0 +1,17 @@
+==========================================================
+ MANUAL QA TEST EXECUTION REPORT: K8s Microservices Mesh
+==========================================================
+Tester: Senior QA Automation & Systems Tester
+Services Tested:
+  - Auth Service (Go, port 8081)
+  - Catalog Service (Go, port 8082)
+  - Order Service (Node.js/TypeScript, port 8083)
+Timestamp: Wed Nov 25 13:01:45 UTC 2026
+
+/tmp/test_microservices.sh: line 23: go: command not found
+/tmp/test_microservices.sh: line 28: go: command not found
+
+> order-service@1.0.0 build
+> tsc
+
+sh: tsc: command not found
