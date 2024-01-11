@@ -1,0 +1,9 @@
+node_modules/
+dist/
+bin/
+*.exe
+*.o
+*.so
+.DS_Store
+*.log
+charts/*.tgz
