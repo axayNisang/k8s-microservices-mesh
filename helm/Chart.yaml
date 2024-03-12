@@ -1,0 +1,9 @@
+apiVersion: v2
+name: cloud-microservices
+description: Production Helm chart for polyglot distributed microservices
+type: application
+version: 1.0.0
+appVersion: "1.0.0"
+maintainers:
+  - name: Akshay Nisang
+    email: axaynisang@gmail.com
