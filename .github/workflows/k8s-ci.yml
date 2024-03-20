@@ -1,0 +1,32 @@
+name: Kubernetes & Helm Lint CI
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  lint-and-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Setup Helm
+        uses: azure/setup-helm@v3
+        with:
+          version: v3.12.0
+
+      - name: Helm Lint
+        run: helm lint helm/
+
+      - name: Setup Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: '1.21'
+
+      - name: Verify Go Services Syntax
+        run: |
+          cd services/auth-service && go vet ./...
+          cd ../catalog-service && go vet ./...
